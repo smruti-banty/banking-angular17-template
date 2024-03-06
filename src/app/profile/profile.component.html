@@ -1,0 +1,101 @@
+<main>
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+  <section>
+    <div class="profile-container">
+      <div>
+        <img
+          src="https://picsum.photos/id/684/600/400"
+          alt="img"
+          role="button"
+          title="edit"
+          (click)="modalVisible = !modalVisible"
+        />
+        <strong>Smruti Ranjan Nayak</strong>
+        <p><i class="fa fa-wallet"></i> {{ 23532.9 | currency : "INR" }}</p>
+        <p><i class="fa fa-phone"></i> +918762345</p>
+        <p><i class="fa fa-envelope"></i> srnayak165&#64;gmail.com</p>
+      </div>
+      <div>
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
+          repudiandae obcaecati amet dolores. Saepe autem, dolore cupiditate
+          inventore molestias corrupti! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Sequi, quia.
+        </p>
+      </div>
+    </div>
+    <div class="form-container">
+      <form method="post">
+        <h2>Personal Detalis</h2>
+        <div class="personal-details">
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" placeholder="Smruti" required />
+          </div>
+          <div class="form-group">
+            <label for="name">Mobile number</label>
+            <input type="text" placeholder="9087654321" required />
+          </div>
+          <div class="form-group">
+            <label for="name">Account type</label>
+            <select name="accountType">
+              <option value="CURRENT">CURRENT</option>
+              <option value="SAVING">SAVING</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name">About customer</label>
+            <textarea
+              name="aboutCustomer"
+              cols="30"
+              rows="3"
+              placeholder="Loyal customer"
+            ></textarea>
+          </div>
+        </div>
+        <h2>Address</h2>
+        <div class="address-details">
+          <div class="form-group">
+            <label for="name">City</label>
+            <input type="text" placeholder="bbsr" required />
+          </div>
+          <div class="form-group">
+            <label for="name">State</label>
+            <input type="text" placeholder="odisha" required />
+          </div>
+          <div class="form-group">
+            <label for="name">Country</label>
+            <input type="text" placeholder="india" required />
+          </div>
+          <div class="form-group">
+            <label for="name">Zip code</label>
+            <input type="text" placeholder="123456" required />
+          </div>
+        </div>
+        <div class="button-group">
+          <button type="submit">Update</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+@if (modalVisible) {
+<app-modal [header]="'Profile picture'">
+  <form method="post">
+    <input type="file" />
+    <div class="button-group">
+      <button type="submit">Upload</button>
+      <button type="button" (click)="modalVisible = !modalVisible">
+        Cancel
+      </button>
+    </div>
+  </form>
+</app-modal>
+} @if (showAlert) {
+<app-alert [heading]="'Success'">
+  <p>Data added</p>
+</app-alert>
+}
