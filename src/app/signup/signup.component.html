@@ -6,14 +6,43 @@
   <div class="form-header"><h2>Sign up</h2></div>
   <div class="form-body">
     <form #signup="ngForm" (ngSubmit)="onSignup(signup)" method="post">
-      <input type="text" placeholder="Full name" name="accountHolderName" required ngModel />
-      <input type="email" placeholder="Email" required name="accountEmail" ngModel />
-      <input type="password" placeholder="Password" name="accountPassword" required ngModel />
-      <input type="text" placeholder="Mobile number" name="mobileNumber" required ngModel />
+      <input
+        type="text"
+        placeholder="Full name"
+        name="accountHolderName"
+        required
+        ngModel
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        required
+        name="accountEmail"
+        ngModel
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        name="accountPassword"
+        required
+        ngModel
+      />
+      <input
+        type="text"
+        placeholder="Mobile number"
+        name="mobileNumber"
+        required
+        ngModel
+      />
       <select name="accountType" ngModel="SAVING">
         <option value="CURRENT">CURRENT</option>
         <option value="SAVING">SAVING</option>
       </select>
+      <textarea
+        name="aboutCustomer"
+        placeholder="About customer"
+        rows="2"
+      ></textarea>
       <input type="submit" value="Sign up" />
     </form>
   </div>

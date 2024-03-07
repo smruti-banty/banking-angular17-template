@@ -11,10 +11,8 @@ section {
   box-shadow: 10px 10px 10px var(--primary-shadow);
   border-radius: 1rem;
   width: clamp(300px, 50%, 500px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  padding-bottom: 1rem;
+  margin: 1rem auto;
 }
 
 .form-header {
@@ -36,13 +34,16 @@ section {
   gap: 1.5rem;
 }
 
-.form-body form input, select {
+.form-body form input,
+select,
+textarea {
   border: none;
   outline: none;
   border-radius: 2rem;
-  padding: 0.7rem;
+  padding: 1rem;
   font-size: 1.1rem;
   background-color: var(--secondary-white);
+  font-family: "Madimi One", sans-serif;
 }
 
 .form-body form input[type="submit"] {

@@ -33,35 +33,36 @@ section {
 .form-body form {
   display: flex;
   flex-direction: column;
-  gap:1.5rem;
+  gap: 1.5rem;
 }
 
 .form-body form input {
   border: none;
   outline: none;
   border-radius: 2rem;
-  padding: 0.7rem;
+  padding: 1rem;
   font-size: 1.1rem;
   background-color: var(--secondary-white);
+  font-family: "Madimi One", sans-serif;
 }
 
 .form-body form input[type="submit"] {
-    background-color: var(--secondary-purple);
-    color: var(--primary-white);
-    cursor: pointer;
-    text-transform: uppercase;
+  background-color: var(--secondary-purple);
+  color: var(--primary-white);
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .form-footer {
-    display: grid;
-    place-items: center;
-    margin-block: 0.5rem;
+  display: grid;
+  place-items: center;
+  margin-block: 0.5rem;
 }
 
 .form-footer p {
-    color: gray;
+  color: gray;
 }
 
 .form-footer a {
-    color: var(--secondary-purple);
+  color: var(--secondary-purple);
 }
